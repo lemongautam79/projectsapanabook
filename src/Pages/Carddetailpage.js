@@ -24,10 +24,10 @@ const Carddetailpage = () => {
         <input type="number" value="1"/>
         <button class="normal">Add To Cart</button> */}
         <h2>Product Details</h2>
-        <span>Reading could help you live longer. People who read books live for around two years longer than
+        {/* <span>Reading could help you live longer. People who read books live for around two years longer than
             those who don't, irrespective of gender, wealth, education or health, according to a Yale University
             study. While a similar association was found among readers of newspapers, it was weaker
-            </span>
+            </span> */}
          </div>
         </section>
         </div>
