@@ -3,7 +3,7 @@ import './LoginSignup.css';
 const LoginSignup = () => {
     return ( 
         <div className='bodyjastai'>
-        <h2>Signup</h2>
+        <h2></h2>
         <div className="container">
 <input type="checkbox" id="flip"/>
 <div className="cover">

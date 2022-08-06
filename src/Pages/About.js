@@ -1,7 +1,7 @@
 
 const About = () => {
     return ( 
-        <div>
+        <div className = "paddingwala">
 		<div className="section">
 		<div className="container">
 			<div className="content-section">
@@ -22,7 +22,7 @@ const About = () => {
 				</div> */}
 			</div>
 			<div className="image-section">
-				<img src="./images/kaal1.png"/>
+				<img src="./images/trisulwala.png"/>
 			</div>
 		</div>
 	</div>

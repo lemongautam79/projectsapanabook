@@ -1,37 +1,85 @@
 import Card from "../Components/Card";
+import {
+    Link,
+    BrowserRouter,
+    Routes,
+    Route,
+  } from "react-router-dom";
+  import React, { useState, useEffect } from "react";
+  import axios from "axios";
+  import './Card.css';
 
-const BuySell = (props) => {
+
+const BuySell = () => {
+    // const slug = useParams();
+    // const Newslug = slug['id'];
+
+    const [Data, setData] = useState([]);
+
+    useEffect(() => {
+        axios.get(`http://192.168.1.70:8000/oldbooks/`)
+            .then((res) => {
+                console.log(res.data);
+                setData(res.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+    }, [])
     return ( 
         <div>
-            {/* <img src="./images/secondhand wala.png" alt="2nd hand png" /> */}
-            <img src="./images/secondhand wala.png" class="d-block w-100" alt="image1"/>
+            <img src="./images/secondhand wala.png" className="d-block w-100 img-fluid" alt="..."/>
+            <h2 style={{
+                color: "#171C24",
+                margin: "0px",
+                padding: "20px",
+                backgroundColor: "#F6F6F6",
+                fontSize: "40px",
+                fontWeight: "bold"
+
+            }}>2ndhand Buy/Sell </h2>
+
             <div className="bodyjastai">
-            <Card 
-            title={props.books[0].title}
-            image={props.books[0].image}
-            price={props.books[0].price}
+                {Data.map(datas => (
+                    <Link to = {`/detail/${datas.id}`}>
+                    <div className="card">
+                        <img src={datas.book_image} />
+                        <div className="card-info">
+                            <h6>{datas.book_name}</h6>
+                            <button>Price:${datas.book_price}
+                                {/* <Link to="/card/detail" ></Link> */}
+                            </button>
+                        </div>
+                    </div>
+                    </Link>
+                ))}
+                {/* <Card
+                    title={props.books[0].title}
+                    image={props.books[0].image}
+                    price={props.books[0].price}
                 />
-            <Card 
-            title={props.books[1].title}
-            image={props.books[1].image}
-            price={props.books[1].price}
+                <Card
+                    title={props.books[1].title}
+                    image={props.books[1].image}
+                    price={props.books[1].price}
                 />
-            <Card 
-            title={props.books[2].title}
-            image={props.books[2].image}
-            price={props.books[2].price}
+                <Card
+                    title={props.books[2].title}
+                    image={props.books[2].image}
+                    price={props.books[2].price}
                 />
-            <Card 
-            title={props.books[3].title}
-            image={props.books[3].image}
-            price={props.books[3].price}
-                />
-            {/* <Card 
-            title={props.books[4].title}
-            image={props.books[4].image}
-            price={props.books[4].price}
+                <Card
+                    title={props.books[3].title}
+                    image={props.books[3].image}
+                    price={props.books[3].price}
                 /> */}
-                </div>
+                {/* <Card
+                    title={props.books[4].title}
+                    image={props.books[4].image}
+                    price={props.books[4].price}
+                /> */}
+            </div>
+
         </div>
      );
 }

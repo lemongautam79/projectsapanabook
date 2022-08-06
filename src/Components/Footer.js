@@ -8,13 +8,15 @@ const Footer = () => {
         <section className = "footer">
           <div className="social">
             <h2 className="footerwala">Follow us:</h2>
-            <a href="#"><i className="fab fa-instagram">
+            <a href="https://www.instagram.com/lemangautam/?hl=en" target= "_blank"><i className="fab fa-instagram">
               </i></a>
-              <a href="#"><i className="fab fa-facebook">
+              <a href="https://www.facebook.com/aazin.gautam.7"><i className="fab fa-facebook">
               </i></a>
-              <a href="#"><i className="fab fa-twitter">
+              <a href="https://twitter.com/Lemongautam79"><i className="fab fa-twitter">
               </i></a>
-              <a href="#"><i className="fab fa-github">
+              <a href="https://github.com/lemongautam79"><i className="fab fa-github">
+              </i></a>
+              <a href="https://www.linkedin.com/in/lemon-gautam-223439203/"><i className="fab fa-linkedin">
               </i></a>
           </div>
           <ul className="list">

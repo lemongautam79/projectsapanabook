@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import './Card.css';
 import {
     BrowserRouter,
     Routes,
@@ -82,19 +81,15 @@ const Card = (props) => {
         </div> */}
 
         {/* <div className="bodyjastai"> */}
-         <div class="card">
+         {/* <div class="card">
       <img src={props.image} />
       <div class="card-info">
         <h6>{props.title}</h6>
-               {/* <button>Rs.{props.price}</button> */}
-                {/* <Link to="/Carddetailpage">
-                ReadMore
-                </Link> */}
                 <button>Readme
                 <Link to = "/card/detail" ></Link>
                 </button>
       </div>
-    </div>
+    </div> */}
     </div>
         // </div>
      );

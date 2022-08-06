@@ -10,7 +10,7 @@
     padding-top:10px;
     padding-bottom: 10px;
     padding-right: 8%;
-    padding-left:8%
+    padding-left:4%
 }
 
 @media (min-width: 992px)
@@ -21,7 +21,15 @@
     color: white;
     font-size: 20px;
     padding-left: 40px;
-}}
+}
+/* .navbar .navbar-brand {
+    max-width: 74%;
+  }
+
+  .navbar .navbar-toggler {
+    max-width: 20%;
+  } */
+}
 
 #searchbox{
     background-color: #1E232B;
